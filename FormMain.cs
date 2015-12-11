@@ -137,6 +137,9 @@ namespace FileChangeNotifier
             {
                 Pen myPen = null;
                 string[] data = line.Split('\t');
+
+                var visible = data[4];
+                if (visible == "false") continue;
                 var width = Int32.Parse(data[5]);
                 var height = Int32.Parse(data[6]);
                 var x = Int32.Parse(data[11]);
