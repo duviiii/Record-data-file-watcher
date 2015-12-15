@@ -138,6 +138,11 @@ namespace FileChangeNotifier
                 Pen myPen = null;
                 string[] data = line.Split('\t');
 
+                if (data[2] == "click")
+                {
+                    continue;
+                }
+
                 var visible = data[4];
                 if (visible == "false") continue;
                 var width = Int32.Parse(data[5]);
